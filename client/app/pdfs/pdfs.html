@@ -1,0 +1,25 @@
+<div class="container">
+    <a ng-href="#/" class="pull-right">Back home</a>
+    <div class="container">
+        <div class="alert alert-info">
+            <h2> Your have {{length}} tasks </h2>
+        </div>
+        <p class="lead">
+          Here is a list of tasks that the admin has set up for you. In order to
+          complete each task, you must read each pdf thoroughly and answer the 
+          security question. Your answer must be as close as possible to the
+          document. Use as many keywords that you find important in order to
+          describe the document. Clicking the verify button will result in
+          success or failure depending on how good your answer is.
+        </p>
+    </div>
+    <br>
+    <div ng-repeat="doc in pdfs track by $index">
+       <div class="task">
+        <h3>Task {{$index + 1}}</h3>
+        <a ng-href="{{doc.filename}}">View document<span class="glyphicon glyphicon-arrow-right"></span></a><br><br>
+        <validate-answer tokens="{{doc.tokens}}" length="length"></validate-answer>
+       </div>
+    </div>
+</div>
+    

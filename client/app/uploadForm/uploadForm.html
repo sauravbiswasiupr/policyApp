@@ -1,0 +1,32 @@
+<button class="btn btn-success btn-small pull-left" type="submit" ng-click="viewForm()">
+    View Form
+</button>
+<span>&nbsp;</span>
+<button class="btn btn-danger btn-small" type="submit" ng-click="hideForm()">
+    Hide form
+</button>
+<br>
+<br>
+<br>
+<form method="POST" ng-show="isFormVisible">
+    <div class="form-group">
+        <input type="text" class="form-control" id="question" placeholder="Enter security question" ng-model="question">
+    </div><br>
+    <div class="form-group">
+        <p>Add some important tags that you deem important.</p>
+        <tags-input ng-model="tags"></tags-input>
+    </div><br>
+    <div class="form-group">
+        <input type="file" id="myFileUpload" file-upload multiple>
+    </div><br>
+    <div class="form-group">
+        <tags-input ng-model="users"></tags-input>
+    </div><br>
+    <button type="submit" class="btn btn-success btn-sm" ng-click="submit()">
+        Upload Data
+        <span class="glyphicon glyphicon-ok"></span>
+    </button>
+</form>
+<br>
+<div class="alert alert-success" role="alert" ng-show="success">Successfully uploaded</div>
+<div class="alert alert-danger" role="alert" ng-show="error">Something went wrong></div>

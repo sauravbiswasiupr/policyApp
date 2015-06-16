@@ -1,0 +1,16 @@
+<div class="jumbotron">
+    <p><a class="pull-right" href="#/"><span class="glyphicon glyphicon-home"></span></a></p>
+  <h2>System Security policies</h2>
+  <p class="lead">
+    This is the section corresponding to system security policies. You need to
+    upload a new pdf document for this section, and a security question. This 
+    would be presented to the end client and the result of the question would 
+    decide if he is deemed to have read the document clearly.
+  </p>
+  <div class="container">
+      <upload-form section-name="{{section}}"></upload-form>
+  </div>
+  <br>
+  <div class="alert alert-success" role="alert" ng-show="success">Successfully uploaded</div>
+  <div class="alert alert-danger" role="alert" ng-show="error">Something went wrong></div>
+</div>
