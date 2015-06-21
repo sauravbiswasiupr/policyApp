@@ -15,7 +15,9 @@ var config = require('./config/environment');
 
 // Setup server
 var app = express();
-mongoose.connect("mongodb://localhost/policyAppDb");
+mongoose.connect("mongodb://localhost/policyAppDb", function() {
+  mongoose.connection.db.dropDatabase();
+});
 app.use(bodyParser());
 
 var server = require('http').createServer(app);

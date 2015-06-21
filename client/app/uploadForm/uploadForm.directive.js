@@ -59,6 +59,7 @@ angular.module('policyAppApp')
                   $scope.question = "";
                   $scope.tags = [];
                   $scope.users = [];
+                  $scope.description = "";
                 }, 3000);
 
                 // Clear the scope bound variables to enable form resubmission
