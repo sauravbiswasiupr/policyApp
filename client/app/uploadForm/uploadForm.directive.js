@@ -41,7 +41,7 @@ angular.module('policyAppApp')
           var body = {
             question: $scope.question,
             tags: self.returnTags($scope.tags),
-            section: "data security",
+            section: $scope.sectionName,
             users: self.returnTags($scope.users),
             filename: $scope.file,
             description: $scope.description

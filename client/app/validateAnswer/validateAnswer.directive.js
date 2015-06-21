@@ -5,7 +5,7 @@ angular.module('policyAppApp')
     return {
       template: 
         '<div class="form-group">' +
-          '<a ng-click="viewDoc()">View Doc</button><br>' +
+          '<a ng-click="viewDoc()">View Doc</a><br>' +
           '<textarea class="form-control" rows="3" placeholder="Your answer" ng-model="answer">' +
           '</textarea><br>' +
           '<button type="submit" class="btn btn-success" ng-click="verify()">Verify</button><br><br>' +
@@ -31,7 +31,9 @@ angular.module('policyAppApp')
                 '   <p>{{description}}</p>' +
                 '  </div>',
               scope: $scope
-          }).result;
+          }).result.then(function() {
+            $modal.close();
+          });
         };
         
         $scope.verify = function() {
