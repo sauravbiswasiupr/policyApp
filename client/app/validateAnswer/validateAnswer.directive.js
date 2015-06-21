@@ -5,6 +5,7 @@ angular.module('policyAppApp')
     return {
       template: 
         '<div class="form-group">' +
+          '<a ng-click="viewDoc()">View Doc</button><br>' +
           '<textarea class="form-control" rows="3" placeholder="Your answer" ng-model="answer">' +
           '</textarea><br>' +
           '<button type="submit" class="btn btn-success" ng-click="verify()">Verify</button><br><br>' +
@@ -14,11 +15,24 @@ angular.module('policyAppApp')
       restrict: 'EA',
       scope: {
         tokens: "@",
-        length: "=length"
+        length: "=length",
+        description: "@",
+        section: "@"
       },
-      controller: ["$scope", "$http", "$timeout", "$element", function($scope, $http, $timeout, $element) {
+      controller: ["$scope", "$http", "$timeout", "$element", "$modal", function($scope, $http, $timeout, $element, $modal) {
         $scope.success = false;
         $scope.error = false;
+        
+        $scope.viewDoc = function() {
+          return $modal.open({
+              template: 
+                '  <div class="modal-body">' +
+                '   <h2>{{section}}</h2>' +
+                '   <p>{{description}}</p>' +
+                '  </div>',
+              scope: $scope
+          }).result;
+        };
         
         $scope.verify = function() {
           var body = {

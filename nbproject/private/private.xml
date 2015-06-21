@@ -4,6 +4,11 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/Users/saurav/policyApp/client/app/validateAnswer/validateAnswer.directive.js</file>
+            <file>file:/Users/saurav/policyApp/client/app/uploadForm/uploadForm.directive.js</file>
+            <file>file:/Users/saurav/policyApp/server/app.js</file>
+            <file>file:/Users/saurav/policyApp/client/app/uploadForm/uploadForm.html</file>
+            <file>file:/Users/saurav/policyApp/server/api/upload/upload.controller.js</file>
+            <file>file:/Users/saurav/policyApp/server/api/upload/userSchema.js</file>
         </group>
     </open-files>
 </project-private>

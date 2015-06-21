@@ -16,9 +16,8 @@
     <br>
     <div ng-repeat="doc in pdfs track by $index">
        <div class="task">
-        <h3>Task {{$index + 1}}</h3>
-        <a ng-href="{{doc.filename}}">View document<span class="glyphicon glyphicon-arrow-right"></span></a><br><br>
-        <validate-answer tokens="{{doc.tokens}}" length="length"></validate-answer>
+         <h3>Task {{$index + 1}}</h3>
+         <validate-answer section="{{doc.section}}" description="{{doc.description}}" tokens="{{doc.tokens}}" length="length"></validate-answer>
        </div>
     </div>
 </div>
