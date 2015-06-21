@@ -16,7 +16,8 @@ exports.index = function(req, res) {
   var question = form.question;
   var users = form.users;
   var section = form.section;
-
+  var description = form.description;
+  
   var userArray = [];
   for (var i = 0; i < users.length; i++) {
     userArray.push({
@@ -24,7 +25,8 @@ exports.index = function(req, res) {
       filename: fileUploadPath,
       question: question,
       tokens: tokens,
-      section: section
+      section: section,
+      description: description
     });
   }
 

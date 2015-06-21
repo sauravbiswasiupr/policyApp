@@ -9,7 +9,8 @@ var userSchema = new Schema({
   filename: String,
   question: String,
   tokens: [String],
-  section: String
+  section: String,
+  description: String
 });
 
 user = mongoose.model("User", userSchema);

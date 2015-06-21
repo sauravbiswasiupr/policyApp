@@ -43,8 +43,9 @@ angular.module('policyAppApp')
             tags: self.returnTags($scope.tags),
             section: "data security",
             users: self.returnTags($scope.users),
-            filename: $scope.file
-          }
+            filename: $scope.file,
+            description: $scope.description
+          };
       
           $http.post("/api/uploads", { form: body })
             .then(function(data, status, headers, config) {

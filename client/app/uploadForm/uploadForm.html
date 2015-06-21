@@ -19,8 +19,14 @@
     <div class="form-group">
         <input type="file" id="myFileUpload" file-upload multiple>
     </div><br>
+    <p>Or</p>
     <div class="form-group">
-        <tags-input ng-model="users"></tags-input>
+       <div class="container">
+        <textarea class="col-xs-12" rows="5" ng-model="description" placeholder="Add the text for the document"></textarea>
+       </div>
+    </div><br>
+    <div class="form-group">
+        <tags-input ng-model="users" placeholder="Add vendors"></tags-input>
     </div><br>
     <button type="submit" class="btn btn-success btn-sm" ng-click="submit()">
         Upload Data
